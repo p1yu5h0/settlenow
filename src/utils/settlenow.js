@@ -1,7 +1,7 @@
 import Expense from "../classes/expense";
 function upheapify(heap, idx) {
 	// heap = [{first: net_value, second: person}]
-	if(idx == 0) return;
+	if(idx === 0) return;
 	var pi = Math.floor((idx-1)/2);
 	if(heap[pi].first < heap[idx].first) {
 		var temp = heap[pi];
@@ -24,7 +24,7 @@ function downheapify(heap, idx) {
 	if(rc < heap.length && heap[rc].first > heap[largest].first) {
 		largest = rc;
 	}
-	if(largest == idx) return;
+	if(largest === idx) return;
 	var temp = heap[largest];
 	heap[largest] = heap[idx];
 	heap[idx] = temp;
@@ -38,7 +38,7 @@ function push_heap(heap, key, val) {
 }
 
 function pop_heap(heap) {
-	if(heap.length == 0) return 0;
+	if(heap.length === 0) return 0;
 	var i = heap.length - 1;
 	var temp = heap[0];
 	heap[0] = heap[i];
@@ -48,7 +48,7 @@ function pop_heap(heap) {
 }
 
 function heap_top(heap) {
-	if(heap.length == 0) {
+	if(heap.length === 0) {
 		return;
 	}
 	return heap[0];
