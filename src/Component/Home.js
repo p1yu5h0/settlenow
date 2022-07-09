@@ -15,7 +15,7 @@ import {
   TableBody,
   Grid,
 } from '@material-ui/core'
-import { splitwise } from '../utils/splitwise'
+import { splitwise } from '../utils/settlenow'
 import { Graph } from 'react-d3-graph'
 import Expense from '../classes/expense'
 
