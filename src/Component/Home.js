@@ -15,9 +15,9 @@ import {
   TableBody,
   Grid,
 } from '@material-ui/core'
+import { splitwise } from '../utils/splitwise'
 import { Graph } from 'react-d3-graph'
 import Expense from '../classes/expense'
-import { splitwise } from '../utils/splitwise'
 
 const Home = () => {
   const [name, setName] = useState('')
@@ -217,7 +217,7 @@ const Home = () => {
     <div>
       <div className="name-component">
         <div className="p-name">
-          <h2>Enter names of People in the group</h2>
+          <h2>Enter the names of F.R.I.E.N.D.S.</h2>
           <div className="p-name-field">
             <TextField id="outlined-basic" label="Name"
               variant="outlined"
@@ -249,10 +249,11 @@ const Home = () => {
         <>
           <Grid container>
             <Grid item xs={12} md={6}>
+              <br />
               <div>
-                <div>
+                {/* <div> */}
                   <h4>Transactions</h4>
-                  <div style={{ textAlign: "left" }}>
+                  {/* <div style={{ textAlign: "left" }}>
                     <p>Enter transactions in the table below :-</p>
                     <ol>
                       <li>Enter the names of the Payer in first column</li>
@@ -261,8 +262,8 @@ const Home = () => {
                       <li>Click on Build Graph to build a graph from the given transactions</li>
                       <li>Click on Simplify payments button when you are done with entering the payments.</li>
                     </ol>
-                  </div>
-                </div>
+                  </div> */}
+                {/* </div> */}
               </div>
               <div className="form">
                 {flag && myForm()}
@@ -289,7 +290,7 @@ const Home = () => {
               ) : null}
             </Grid>
           </Grid>
-
+                <br />
           <Grid container>
             <Grid item xs={12} md={6}>
               {
@@ -326,7 +327,7 @@ const Home = () => {
               {
                 Object.keys(outputGraphData).length && Object.keys(inputGraphConfig).length ? (
                   <>
-                    <h5>Graph generated from the solution of algorithm</h5>
+                    <h3>Graph generated from the solution of algorithm</h3>
                     <Graph
                       id="graph-id-output" // id is mandatory
                       data={outputGraphData}
